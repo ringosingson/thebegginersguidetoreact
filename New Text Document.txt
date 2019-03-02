@@ -101,3 +101,21 @@ now using jsx we rewrite the code
 
 </body>
 </html>
+
+using props and override className and children
+
+<script type="text/babel">
+	const rootElement = document.getElementById('root')
+	const content = 'Hello World'
+	const myClassName = 'container'
+	const props = {
+		className: 'container',
+		children: 'Hello World',
+	}
+	//const element = <div {...props}/>
+	//const element = <div {...props} className= 'myClass'/> //to override the className container if it comes from other source   
+//const element  = <div {...props} children= 'override me'/>// children props override
+	const element = <div {...props}>override regular</div>// children props override regular style
+	ReactDOM.render(element, rootElement)
+</script>
+
