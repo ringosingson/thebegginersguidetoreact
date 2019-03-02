@@ -67,6 +67,8 @@ now in react
 </html>
 
 we can remove and code as children in props 
+1.adding standalone babel cdn(to use jsx we need a converter without babel it doesnt work)
+2. changing text/javascript to text/babel
 
 const element = React.createElement('div',
 		{className: 'container',
@@ -75,3 +77,27 @@ const element = React.createElement('div',
 		})
 	console.log(element)
 	ReactDOM.render(element, rootElement)
+
+now using jsx we rewrite the code
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Beginner</title>
+</head>
+<body>
+	<div id="root"></div>
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src= "https://unpkg.com/babel-standalone@7.0.0-beta.3/babel.js"></script> //babel
+
+<script type="text/babel"> //change
+	const rootElement = document.getElementById('root')
+	const content = 'Hello World'
+	const element = <div className='container'>{content}</div> //html like syntax
+								inside curly brac we can play wit javascript the power of jsx
+	ReactDOM.render(element, rootElement)
+</script>
+
+</body>
+</html>
