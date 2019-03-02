@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Beginner</title>
+</head>
+<body>
+	<div id="root"></div>
+<script type="text/javascript">
+	const rootElement = document.getElementById('root');
+	const element = document.createElement('div');
+	element.textContent = 'Hello World';
+	element.className = 'container';
+	rootElement.appendChild(element);
+</script>
+
+</body>
+</html>
+
+in pure javascript
+now using react 
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Beginner</title>
+</head>
+<body>
+	<div id="root"></div>
+<script type="text/javascript">
+	const rootElement = document.getElementById('root');
+	const element = document.createElement('div');
+	element.textContent = 'Hello World';
+	element.className = 'container';
+	rootElement.appendChild(element);
+</script>
+
+</body>
+</html>
+
+now in react
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Beginner</title>
+</head>
+<body>
+	<div id="root"></div>
+<script  src="https://unpkg.com/react@16/umd/react.development.js"></script>  //cdn for react and react-dom
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script type="text/javascript">
+	const rootElement = document.getElementById('root');
+	//const element = document.createElement('div');
+	//element.textContent = 'Hello World';
+	//element.className = 'container';
+	//rootElement.appendChild(element);
+	const element = React.createElement('div',
+		{className: 'container'},
+		'Hello World',
+		'Here i come REAct'  //here  we gonna have children as an array for both
+		)
+	console.log(element)
+	ReactDOM.render(element, rootElement)
+</script>
+
+</body>
+</html>
+
+we can remove and code as children in props 
+
+const element = React.createElement('div',
+		{className: 'container',
+		 //children: ['Hello World','Here i come React']}
+		 children: 'Hello World',
+		})
+	console.log(element)
+	ReactDOM.render(element, rootElement)

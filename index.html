@@ -14,10 +14,10 @@
 	//element.className = 'container';
 	//rootElement.appendChild(element);
 	const element = React.createElement('div',
-		{className: 'container'},
-		'Hello World',
-		'Here i come REAct'
-		)
+		{className: 'container',
+		 //children: ['Hello World','Here i come React']}
+		 children: 'Hello World',
+		})
 	console.log(element)
 	ReactDOM.render(element, rootElement)
 </script>
